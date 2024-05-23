@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontpoint.Server", "Frontpoint.Server\Frontpoint.Server.csproj", "{A9783805-29C0-4326-BCF6-5271199BDF0A}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "frontpoint.client", "frontpoint.client\frontpoint.client.esproj", "{89CE084B-C8A4-44D1-882A-EC6AAAD047E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9783805-29C0-4326-BCF6-5271199BDF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9783805-29C0-4326-BCF6-5271199BDF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9783805-29C0-4326-BCF6-5271199BDF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9783805-29C0-4326-BCF6-5271199BDF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89CE084B-C8A4-44D1-882A-EC6AAAD047E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CE084B-C8A4-44D1-882A-EC6AAAD047E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CE084B-C8A4-44D1-882A-EC6AAAD047E3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{89CE084B-C8A4-44D1-882A-EC6AAAD047E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CE084B-C8A4-44D1-882A-EC6AAAD047E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89CE084B-C8A4-44D1-882A-EC6AAAD047E3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9DDFDB6-C9F9-4F78-A682-A738DF2972A1}
+	EndGlobalSection
+EndGlobal
