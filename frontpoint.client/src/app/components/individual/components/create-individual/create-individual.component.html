@@ -1,0 +1,12 @@
+<div>
+  <a [routerLink]="['/individuals']">Individuals</a> >
+  <a [routerLink]="['/individuals', 'create']">New Individual</a>
+</div>
+
+<frontpoint-page-title>New Individual</frontpoint-page-title>
+
+<app-individual-form
+  [mode]="'create'"
+  (saved)="handleFormComplete($event)"
+  (canceled)="handleFormComplete($event)"
+></app-individual-form>
