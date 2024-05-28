@@ -1,0 +1,90 @@
+<form [formGroup]="form">
+  <div class="group horizontal-group">
+    <mat-form-field>
+      <mat-label>Prefix</mat-label>
+      <input matInput formControlName="prefix" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="firstName" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Middle Name</mat-label>
+      <input matInput formControlName="middleName" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lastName" />
+    </mat-form-field>
+  </div>
+
+  <div class="group horizontal-group">
+    <mat-form-field>
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker1" formControlName="dateOfBirth" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker1"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Phone number</mat-label>
+      <frontpoint-telephone-input
+        formControlName="telephoneNumber"
+      ></frontpoint-telephone-input>
+      <mat-icon matSuffix>phone</mat-icon>
+      <mat-hint>Include area code</mat-hint>
+    </mat-form-field>
+  </div>
+
+  <div class="group vertical-group">
+    <mat-form-field>
+      <mat-label>Address Line 1</mat-label>
+      <input matInput formControlName="addressLine1" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Address Line 2</mat-label>
+      <input matInput formControlName="addressLine2" />
+    </mat-form-field>
+
+    <div class="align-start">
+      <mat-form-field>
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" />
+      </mat-form-field>
+    </div>
+
+    <div class="align-start">
+      <mat-form-field>
+        <mat-label>State</mat-label>
+        <input matInput formControlName="state" />
+      </mat-form-field>
+    </div>
+
+    <div class="align-start">
+      <mat-form-field>
+        <mat-label>Zip</mat-label>
+        <input matInput formControlName="zip" />
+      </mat-form-field>
+    </div>
+
+    <div class="align-start">
+      <mat-form-field>
+        <mat-label>Country</mat-label>
+        <input matInput formControlName="country" />
+      </mat-form-field>
+    </div>
+  </div>
+</form>
+
+<div class="btn-container">
+  <button mat-stroked-button color="primary" (click)="cancel()">Cancel</button>
+  <button mat-flat-button color="primary" (click)="save()">Save</button>
+</div>
