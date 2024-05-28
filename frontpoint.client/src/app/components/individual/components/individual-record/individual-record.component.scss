@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+
+.kvp {
+  display: flex;
+  flex-flow: row;
+  gap: 0.5rem;
+}
+
+.key {
+  font-weight: bold;
+  width: 150px;
+}

@@ -1,0 +1,44 @@
+<div class="kvp">
+  <div class="key">Name:</div>
+  <div class="value">
+    {{
+      {
+        prefix: individual.prefix,
+        first: individual.firstName,
+        middle: individual.middleName,
+        last: individual.lastName
+      } | name
+    }}
+  </div>
+</div>
+
+<div class="kvp">
+  <div class="key">Date of Birth:</div>
+  <div class="value">
+    {{ individual.dateOfBirth | date }}
+  </div>
+</div>
+
+<div class="kvp">
+  <div class="key">Phone Number:</div>
+  <div class="value">
+    {{ individual.telephoneNumber | phone }}
+  </div>
+</div>
+
+<div class="kvp">
+  <div class="key">Address:</div>
+  <div
+    class="value"
+    [innerText]="
+      {
+        addressLine1: individual.addressLine1,
+        addressLine2: individual.addressLine2,
+        city: individual.city,
+        state: individual.state,
+        zip: individual.zip,
+        country: individual.country
+      } | address
+    "
+  ></div>
+</div>
