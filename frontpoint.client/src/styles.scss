@@ -1,0 +1,30 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+$frontpoint-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+    ),
+    density: (
+      scale: -2,
+    ),
+  )
+);
+
+html {
+  @include mat.all-component-themes($frontpoint-theme);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+a {
+  text-decoration: none;
+}
