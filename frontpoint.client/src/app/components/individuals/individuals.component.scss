@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+h1 {
+  margin: 0;
+}
+
+.title-container {
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.controls-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
