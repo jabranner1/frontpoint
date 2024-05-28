@@ -15,6 +15,13 @@ export const ROUTES: Route[] = [
       ),
   },
   {
+    path: 'individuals/create',
+    loadComponent: () =>
+      import(
+        './components/individual/components/create-individual/create-individual.component'
+      ).then((x) => x.CreateIndividualComponent),
+  },
+  {
     path: 'individuals/:individualId',
     resolve: {
       individual: individualResolver,
