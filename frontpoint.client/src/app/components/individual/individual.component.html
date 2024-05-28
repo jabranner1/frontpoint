@@ -1,0 +1,50 @@
+<div>
+  <a [routerLink]="['/individuals']">Individuals</a> >
+  <a [routerLink]="['/individuals', individual.id]">{{
+    {
+      prefix: individual.prefix,
+      first: individual.firstName,
+      middle: individual.middleName,
+      last: individual.lastName
+    } | name
+  }}</a>
+</div>
+
+<frontpoint-page-title>{{
+  {
+    prefix: individual.prefix,
+    first: individual.firstName,
+    middle: individual.middleName,
+    last: individual.lastName
+  } | name
+}}</frontpoint-page-title>
+
+@if (mode === "edit") {
+  <app-individual-form
+    [individual]="individual"
+    [mode]="mode"
+    (saved)="handleFormCompleteEvent($event)"
+    (canceled)="handleFormCompleteEvent($event)"
+  ></app-individual-form>
+} @else {
+  <app-individual-record [individual]="individual"></app-individual-record>
+
+  <div class="icon-container">
+    <button
+      mat-icon-button
+      aria-label="Delete icon"
+      matTooltip="Delete individual"
+      (click)="initiateDelete()"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      aria-label="Edit icon"
+      matTooltip="Edit individual"
+      (click)="initiateEdit()"
+    >
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+}

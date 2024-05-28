@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+.icon-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
