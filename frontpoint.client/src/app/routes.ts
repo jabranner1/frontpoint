@@ -1,4 +1,5 @@
 import { Route } from '@angular/router';
+import { individualResolver } from './services/individual.resolver';
 
 export const ROUTES: Route[] = [
   {
@@ -11,6 +12,16 @@ export const ROUTES: Route[] = [
     loadComponent: () =>
       import('./components/individuals/individuals.component').then(
         (x) => x.IndividualsComponent,
+      ),
+  },
+  {
+    path: 'individuals/:individualId',
+    resolve: {
+      individual: individualResolver,
+    },
+    loadComponent: () =>
+      import('./components/individual/individual.component').then(
+        (x) => x.IndividualComponent,
       ),
   },
 ];
